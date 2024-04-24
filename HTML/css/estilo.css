@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #181419;
+    color: white;
+}
+
+.header {
+    display: block;
+    background-color: #9f3647;
+    color: #ffffff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1.5rem 0;
+
+}
+
+.anclaLogo {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.listaNav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.listaItem {
+    margin-right: 20px;
+
+}
+
+.linkNav {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.linkNav:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.linkNav.iniciarSesion {
+    background-color: #181419;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sectionPrincipal {
+    color: white;
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(https://giselemilagros88.github.io/cac_movies_javaphp/assets/img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tituloPrincipal {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtituloPrincipal {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.botonRegistrarse {
+    background-color: #9f3647;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buscadorPrincipal {
+    background-color: #181419;
+    color: rgb(255, 255, 255);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloSection {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.buscadorPeliculas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.inputBuscador {
+    border: 2px solid white;
+    border-radius: 25px;
+    color: #000000;
+    font-size: 1.2rem;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    padding: 0px 20px;
+    width: 500px;
+}
+
+.botonBuscador {
+    background-color: #9f3647;
+    display: inline-block;
+    color: #ffffff;
+    height: 50px;
+    margin: 20px 10px;
+    padding: 0 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 2px solid white;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+hr {
+    border: 1px solid #9f3647;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.peliculasTendencia {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tituloSection {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.pelicula {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.boton {
+    border: 1px solid white;
+    box-sizing: content-box;
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color: #9f3647;
+    color: #ffffff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 60px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.peliculasAclamadas {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.aclamadas {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 0px 40px 0px;
+}
+
+.peliculaItem {
+    border-radius: 25px;
+    width: 170px;
+    min-width: 170px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer {
+    background-color: #9f3647;
+    color: #ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.administradorPeliculas {
+    background-color: #181419;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.flechaArriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+}
+/*  --------------------------------- REGISTRARSE -------------------------------------- */
+.bodyRegistrarse {
+    height: 100vh;
+    background: linear-gradient(to right top, #24242473, #24242473), url(https://giselemilagros88.github.io/cac_movies_javaphp/assets/img/bg-register.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.headerRegistrarse {
+    color: #ffffff;
+    height: 8vh;
+    padding: 30px;
+}
+.seccionRegistrarse {
+    background-color: rgb(42, 42, 42);
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: 1.2rem;
+}
+form {
+    width: 100%;
+    padding: 40px;
+}
+.tituloRegistrarse {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+ .inputRegistro {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #9f3647;
+    background-color: #333333;
+    outline: none;
+    color: rgb(255, 255, 255);
+} 
+.terminos {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ayuda {
+    margin-top: 40px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #787878;
+    font-weight: 400;
+}
+.sendRegistro {
+    width: 87%;
+    box-sizing: content-box;
+    background-color: #9f3647;
+    border: 2px solid #9f3647;
+    color: #ffffff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+@media only screen and (max-width: 768px) {
+    .header {
+        height: initial;
+    }
+
+    .navegacion {
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .anclaLogo {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .listaNav {
+        padding: initial;
+    }
+
+    .linkNav {
+        font-weight: 400;
+        margin-right: initial;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    .sectionPrincipal {
+        height: 60vh;
+    }
+
+    .tituloPrincipal {
+        font-size: 2.5rem;
+    }
+
+    .buscadorPrincipal {
+        height: 30vh;
+    }
+
+    .tituloSection {
+        font-size: 1.6rem;
+    }
+
+    .inputBuscador {
+        font-size: 1rem;
+        height: 40px;
+        width: 300px;
+    }
+
+    .peliculas {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .peliculasTendencia {
+        width: 95%;
+    }
+
+    .pelicula {
+        width: 100%;
+        height: 500px;
+    }
+   
+       
+}
+@media only screen  and (max-width: 1200px){
+    .seccionRegistrarse {
+        width: 95%;
+        padding: 10px 10px;
+    }
+    form {
+        width: 100%;
+        text-align: center;
+    }
+    .tituloRegistrarse {
+        font-size: 2rem;
+    }
+    .inputRegistro {
+        width: 80%;
+        height: 35px;
+        font-size: 1rem;
+    }
+    .terminos {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 0.7rem;
+    }
+    .sendRegistro {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 70%;
+        padding: 0.8rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    .ayuda {
+        text-align: left;
+        font-size: 0.8rem;
+    }
+}
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-5px); /* Cambia la cantidad de desplazamiento según tu preferencia */
+    }
+    20%, 80% {
+        transform: translateX(5px);
+    }
+    30%, 50%, 70% {
+        transform: translateX(-10px);
+    }
+    40%, 60% {
+        transform: translateX(10px);
+    }
+} 
+.shake:hover {
+    animation: shake 0.5s ease-in-out infinite;
+}
+@keyframes shrink-grow {
+    0% {
+        transform: scale(0); /* Tamaño inicial */
+    }
+    50% {
+        transform: scale(0.5); /* Tamaño más pequeño */
+    }
+    100% {
+        transform: scale(1); /* Tamaño final */
+    }
+}
+.main {
+    animation: shrink-grow 2s linear;
+}
