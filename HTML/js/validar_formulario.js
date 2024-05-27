@@ -12,6 +12,11 @@ function validarFormulario() {
          alert('Por favor, ingresa una dirección de correo electrónico válida.');
          return false;
      }
+     //validar contraseña
+     if(password.length <= 4 ){
+        alert("Contraseña demasiado corta. Por favor, ingrese una nueva Contraseña");
+        return false
+     }
 
     return true;
 }
