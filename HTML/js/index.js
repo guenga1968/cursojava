@@ -22,12 +22,12 @@ const cargarPeliculas = async ()=>{
     try{
         const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=191528030c357419329af1198edbcb24&language=es-MX&page=${pagina}`);
         if(respuesta.status === 200){
-            const datos = await respuesta.json();
 
+            const datos = await respuesta.json();
             let peliculas = []
             datos.results.forEach(pelicula =>{
                 peliculas +=`
-                <div class="peliculas"><a href="./paginas/detalle.html">
+                <div class="peliculas"><a href="./paginas/detalle.html?path=${pelicula.poster_path}&titulo=${pelicula.title}&description=${pelicula.overview}">
                         <div class="pelicula"><img class="imgTendencia"
                                 src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"
                                 alt="${pelicula.title}" >
