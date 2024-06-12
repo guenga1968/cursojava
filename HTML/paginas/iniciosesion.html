@@ -24,15 +24,15 @@
     <main class="main">
         <section class="seccionRegistrarse ">
 
-            <form action="" method="get">
+            <form action="" method="get" onsubmit="validarFormulario()">
                 <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
                 <div>
                     <input type="email" placeholder="Email" id="email" name="email" class="inputRegistro">
-                    <div class="error-text"></div>
+                    
                 </div>
                 <div>
                     <input type="password" placeholder="Contraseña" id="password" name="password" class="inputRegistro">
-                    <div class="error-text"></div>
+                    
                 </div>
                 <div>
                     <input class="sendRegistro" type="submit" value="Iniciar Sesión">
@@ -44,8 +44,8 @@
         </section>
     </main>
 
-    <script src="https://kit.fontawesome.com/d706638721.js" crossorigin="anonymous"></script>
-
+    <script src="../js/validar_formulario.js"></script>
+    
 </body>
 
 </html>
