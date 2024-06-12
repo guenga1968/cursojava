@@ -6,7 +6,9 @@ public class App {
          * boolean
          */
         // comentario en una liena
-        
+
         System.out.printf("%d %n",variable + dato);
+        System.out.println("el resultado de la suma es " + variable);
+        System.out.printf("el dato es " + (variable == dato));
     }
 }
